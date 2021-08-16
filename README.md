@@ -1,2 +1,1 @@
-# TimeLimitItem
-기간제아이템.
+# TimeLimitItem (기간제 아이템 플러그인)
