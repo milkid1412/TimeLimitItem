@@ -36,7 +36,8 @@ class EventListener implements Listener
             }
         }
     }
-
+/**
+* TODO: fix jot bug
     public function onItemMove(InventoryTransactionEvent $event): void
     {
         $transaction = $event->getTransaction();
@@ -53,4 +54,5 @@ class EventListener implements Listener
             }
         }
     }
+    */
 }
