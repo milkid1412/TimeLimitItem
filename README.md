@@ -6,6 +6,9 @@
  - ** This branch is now in upgrading process, so there may be an error via using this plugin **
 
 ## Commands
- - `timeitem`
+ - /timeitem
  - Usage: `/timeitem [time]` (format of time must be: YYYY:MM:DD:hh:ii:ss)
- - alies: 
+ - allies: /tli, /기간제, /기간제아이템
+ 
+## TODO
+ ||test
