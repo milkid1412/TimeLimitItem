@@ -17,6 +17,6 @@
  - [ ] Test this plugin in server XD
 
 ## Knwon Bugs
- - If there are any knwon bugs, plz contact me at:
+ - If you find any bugs of this plugin, plz contact me at:
      - Kakao Talk - nine_hyeon
      - Discord: 구현#1342
