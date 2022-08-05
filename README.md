@@ -8,7 +8,8 @@
 ## Commands
  - /timeitem
  - Usage: `/timeitem [time]` (format of time must be: YYYY:MM:DD:hh:ii:ss)
- - Permission: 
+ - Description: A command that creates time-limit item
+ - Permission: timeitem.command.createtimeitem
  - Allies: /tli, /기간제, /기간제아이템
  
 ## TODO
