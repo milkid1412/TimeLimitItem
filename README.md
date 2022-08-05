@@ -8,7 +8,8 @@
 ## Commands
  - /timeitem
  - Usage: `/timeitem [time]` (format of time must be: YYYY:MM:DD:hh:ii:ss)
- - allies: /tli, /기간제, /기간제아이템
+ - Permission: 
+ - Allies: /tli, /기간제, /기간제아이템
  
 ## TODO
  - [ ] test
