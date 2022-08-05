@@ -13,7 +13,8 @@
  - Allies: /tli, /기간제, /기간제아이템
  
 ## TODO
- - [ ] test
+ - [X] Support Pocketmine-MP 4.x.x
+ - [ ] Test this plugin in server XD
 
 ## Knwon Bugs
  - If there are any knwon bugs, plz contact me at:
