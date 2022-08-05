@@ -18,7 +18,7 @@ class CreateTimeLimitItemCommand extends Command
      */
     public function __construct(TimeLimitItem $owner)
     {
-        parent::__construct('기간제', '기간제 아이템을 생성합니다.', '/기간제 (날짜): 날짜 형식은 YYYY:MM:DD:hh:ii:ss로 적어주세요.', ['기간제아이템', 'timeitem']);
+        parent::__construct('기간제', '기간제 아이템을 생성합니다.', '/기간제 (날짜): 날짜 형식은 YYYY:MM:DD:hh:ii:ss로 적어주세요.', ['기간제아이템', 'tli', 'timelimititem', 'timeitem', 'fti']);
         $this->owner = $owner;
         $this->setPermission('OP');
     }
