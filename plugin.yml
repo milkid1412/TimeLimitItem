@@ -3,3 +3,8 @@ author: Kkevin14
 api: 4.0.0
 version: 1.0.0
 main: Kkevin14\TimeLimitItem\TimeLimitItem
+
+permissions:
+  timeitem.command.createtimeitem:
+    default: op
+    description: permission for create time limit item command
