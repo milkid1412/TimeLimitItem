@@ -6,6 +6,7 @@ namespace Kkevin14\TimeLimitItem;
 use pocketmine\event\inventory\InventoryTransactionEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\nbt\tag\IntTag;
 
 class EventListener implements Listener
 {
@@ -28,31 +29,31 @@ class EventListener implements Listener
     {
         $player = $event->getPlayer();
         $item = $event->getItem();
-        if($item->getNamedTagEntry('time_item') !== null){
-            $time = $item->getNamedTagEntry('time_item')->getValue();
+        if($item->getNamedTag()->getTag('time_item') instanceof IntTag){
+            $time = $item->getNamedTag()->getTag('time_item')->getValue();
             if($time < $_SERVER['REQUEST_TIME']){
                 $player->getInventory()->removeItem($item);
-                $this->owner->msg($player, '아이템의 기간이 만료되어 삭제되었습니다.');
+                $this->owner->msg($player, '해당 아이템의 기간이 만료되어 삭제되었습니다.');
             }
         }
     }
-/**
-* TODO: fix jot bug
+
     public function onItemMove(InventoryTransactionEvent $event): void
     {
         $transaction = $event->getTransaction();
         $player = $transaction->getSource();
         foreach($transaction->getInventories() as $inventory){
-            foreach($inventory->getContents() as $item){
-                if($item->getNamedTagEntry('time_item') !== null){
-                    $time = $item->getNamedTagEntry('time_item')->getValue();
+            foreach($transaction->getActions() as $action){
+                $item = $action->getTargetItem();
+                if($item->getNamedTag()->getTag('time_item') instanceof IntTag){
+                    $time = $item->getNamedTag()->getTag('time_item')->getValue();
                     if($time < $_SERVER['REQUEST_TIME']){
+                        $event->cancel();
                         $inventory->removeItem($item);
-                        $this->owner->msg($player, '아이템의 기간이 만료되어 삭제되었습니다.');
+                        $this->owner->msg($player, '해당 아이템의 기간이 만료되어 삭제되었습니다.');
                     }
                 }
             }
         }
     }
-    */
 }

@@ -6,8 +6,7 @@ namespace Kkevin14\TimeLimitItem\command;
 use Kkevin14\TimeLimitItem\TimeLimitItem;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\nbt\tag\IntTag;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class MainCommand extends Command
 {
@@ -46,7 +45,7 @@ class MainCommand extends Command
             $this->owner->msg($sender, '기간을 정확히 입력해주세요.');
             return;
         }
-        $item->setNamedTagEntry(new IntTag('time_item', $time));
+        $item->getNamedTag()->setInt('time_item', $time);
         $itemName = $item->hasCustomName() ? $item->getCustomName() : $item->getName();
         $item->setCustomName('§e[ §b기간제 §e] §r' . $itemName);
         $lore = $item->getLore();

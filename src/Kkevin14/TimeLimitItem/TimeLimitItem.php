@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 
 class TimeLimitItem extends PluginBase
 {
-    protected function onEnable()
+    protected function onEnable(): void
     {
         $this->getServer()->getCommandMap()->register('Kkevin14', new MainCommand($this));
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
