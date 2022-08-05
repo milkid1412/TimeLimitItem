@@ -31,7 +31,7 @@ class EventListener implements Listener
         $item = $event->getItem();
         if($item->getNamedTag()->getTag('time_item') instanceof IntTag){
             $time = $item->getNamedTag()->getTag('time_item')->getValue();
-            if($time < $_SERVER['REQUEST_TIME']){
+            if($time < time()){
                 $player->getInventory()->removeItem($item);
                 $this->owner->msg($player, '해당 아이템의 기간이 만료되어 삭제되었습니다.');
             }
@@ -47,7 +47,7 @@ class EventListener implements Listener
                 $item = $action->getTargetItem();
                 if($item->getNamedTag()->getTag('time_item') instanceof IntTag){
                     $time = $item->getNamedTag()->getTag('time_item')->getValue();
-                    if($time < $_SERVER['REQUEST_TIME']){
+                    if($time < time()){
                         $event->cancel();
                         $inventory->removeItem($item);
                         $this->owner->msg($player, '해당 아이템의 기간이 만료되어 삭제되었습니다.');
