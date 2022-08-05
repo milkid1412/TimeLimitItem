@@ -12,3 +12,8 @@
  
 ## TODO
  - [ ] test
+
+## Knwon Bugs
+ - If there are any knwon bugs, plz contact me at:
+ -- Kakao Talk - nine_hyeon
+ -- Discord: 구현#1342
